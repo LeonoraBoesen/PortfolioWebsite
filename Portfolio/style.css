@@ -155,41 +155,98 @@ main {
   font-weight: bold;
 }
 
-#portfolio-projects {
-  padding: 50px 20px;
-  background: linear-gradient(to bottom, #222, #111);
-  color: white;
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-.project-grid {
+main {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.project {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 70vh; /* Reduce height to move it up */
+  padding: 3% 5%; /* Reduce padding */
+  background: linear-gradient(to bottom, #0c0c0c, #1a1a1a);
 }
 
-.project-card {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  max-width: 300px;
-  width: 100%;
-  text-align: left;
+
+.project-text {
+  flex: 1;
+  max-width: 50%;
 }
 
-.project-card h2 {
+.project-text h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.project-text h1 span {
   color: #4381ed;
 }
 
-.project-card .btn {
+.project-text h2 {
+  font-size: 2rem;
+  color: #aaa;
+}
+
+.project-text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.project-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-text ul li {
+  font-size: 1.1rem;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.project-text ul li::before {
+  content: "•";
+  color: #4381ed;
+  position: absolute;
+  left: 0;
+}
+
+.btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  background-color: #4381ed;
-  color: #111;
+  margin-top: 20px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background-color: white;
+  color: black;
   font-weight: bold;
   text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4381ed;
+  color: white;
+}
+
+.project-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-media video {
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
 }
